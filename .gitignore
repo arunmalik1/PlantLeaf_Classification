@@ -3,6 +3,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#common ignores, also ignore data folder 
+/Data
+Data/
+*.csv
+*.tsv
+*.db
+*.zip
+
 # C extensions
 *.so
 
