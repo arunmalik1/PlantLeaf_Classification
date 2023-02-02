@@ -10,6 +10,8 @@ Data/
 *.tsv
 *.db
 *.zip
+*.h5
+*.hdf5
 
 # C extensions
 *.so
