@@ -31,7 +31,7 @@ Our goal in training a model is to reduce the loss between the ground truth of t
 
 **Models**
 
-I created a 2d CNN model, with a 3x3 kernel, 2x2 stride and relu activation. This base model has three layers of convolutions and poolings before flattening and fed to the dense layer. The softmax funtion then takes all this information and calulates probabilities. I deciced to train models for fifty epochs; an epoch when the data is processed fully forwards and backwards in the model. As expected, the model was not accurate and was overfitting the data. 
+I created a 2D CNN model, with a 3x3 kernel, 2x2 stride and relu activation. This base model has three layers of convolutions and poolings before flattening and fed to the dense layer. The softmax funtion then takes all this information and calulates probabilities. I deciced to train models for fifty epochs; an epoch when the data is processed fully forwards and backwards in the model. As expected, the model was not accurate and was overfitting the data. 
 
 ![BaseAccuracy](https://user-images.githubusercontent.com/115169255/219435623-e53a471e-a37f-4524-aca4-2538cc552f23.png)
 
