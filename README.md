@@ -18,7 +18,8 @@ The Food and Agriculture Organization of the United Nations (FAO) estimates that
 
 The data is split in train, validation and tests sets. All models used the validation set to calculated thier initial accuracy before being evaluated on the test set. Here is a look at some of the images in the train set:
 
-![Leaves](https://user-images.githubusercontent.com/115169255/219439381-782abf30-e933-4a1f-a1f4-322a10c271f6.png)
+![Leaves](https://user-images.githubusercontent.com/115169255/219449863-9e05635d-1bde-44d7-902f-eec9d2f4b364.png)
+
 
 **CNN**
 
@@ -47,8 +48,25 @@ When creating CNN models with the minimal amount of data, it is wise to use data
 
 ![L1Model2Accuracy](https://user-images.githubusercontent.com/115169255/219446397-6c48c1a5-9049-47b2-8069-879322251dbb.png)
 
+To see where the model was worng I created a confusion matrix of the predictions:
+
+![BestModelConfusion](https://user-images.githubusercontent.com/115169255/219448547-a5e7124a-a48d-40ed-abae-c9e41db67190.png)
+
+The model has a few miscalculations but has the hardest time correctly categorising Pongamia diseased leaves. Mostly, they are being classified as healthy Jamun leaves. Taking a deeper look into these leaves revealed that they look very similar and so the model wasn't good at classifying them properly.
+
 Here is the artitecture of my final model:
 
 ![L1Model2](https://user-images.githubusercontent.com/115169255/219447549-63904b21-136f-46a9-bda6-9e4b5546f059.png)
 
+**Transfer Learning**
 
+There are many exsisting CNN models that and have been trained on considerably larger datasets. We can leverage these models on the data we have to see if they perform better. I used a tuned VGG 16 and a Resnet 50 model, both of which are considerably more complicated from the simple model I created. The resnet model was the most accurate with the final score of 93.64% on the test set. Below is the architecture and the confusion matrix of the resnet 50 model:
+
+![Resent50Art](https://user-images.githubusercontent.com/115169255/219451600-d5d96ca7-851b-430c-9831-e8b4120c3399.png)
+
+![ResnetConfusion](https://user-images.githubusercontent.com/115169255/219451234-b5500de7-885e-40c5-bb54-1cf7fbcb715c.png)
+
+
+**Final Thoughts**
+
+It goes without saying that decreasing loss of produce should be a top priority around the world. In the future, I'd like to develope an app where people could take a picture of a leaf to find out if its diseased and should be revomed to protect the plant. 
